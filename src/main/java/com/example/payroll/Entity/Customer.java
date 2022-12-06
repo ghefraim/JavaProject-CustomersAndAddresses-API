@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.payroll.Entity;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-class Customer {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private  Long id;
@@ -17,7 +17,7 @@ class Customer {
 
     Customer() {}
 
-    Customer(String name, Long addressId) {
+    public Customer(String name, Long addressId) {
         this.name = name;
         this.addressId = addressId;
     }

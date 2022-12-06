@@ -1,5 +1,8 @@
-package com.example.payroll;
+package com.example.payroll.Service;
 
+import com.example.payroll.Entity.Address;
+import com.example.payroll.ErrorHandler.AddressNotFoundException;
+import com.example.payroll.Repository.AddressRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,23 +11,23 @@ import java.util.List;
 public class AddressService {
     private final AddressRepository repository;
 
-    AddressService(AddressRepository repository) {
+    public AddressService(AddressRepository repository) {
         this.repository = repository;
     }
 
-    List<Address> getAddresses() {
+    public List<Address> getAddresses() {
         return repository.findAll();
     }
 
-    Address getAddress(Long id) {
+    public Address getAddress(Long id) {
         return repository.findById(id).orElseThrow(() -> new AddressNotFoundException(id));
     }
 
-    Address createAddress(Address address) {
+    public Address createAddress(Address address) {
         return repository.save(address);
     }
 
-    Address updateAddress(Address newAddress, Long id) {
+    public Address updateAddress(Address newAddress, Long id) {
         return repository.findById(id)
                 .map(Address -> {
                     Address.setStreet(newAddress.getStreet());
@@ -39,7 +42,7 @@ public class AddressService {
                 });
     }
 
-    void deleteAddress(Long id) {
+    public void deleteAddress(Long id) {
         repository.deleteById(id);
     }
 }

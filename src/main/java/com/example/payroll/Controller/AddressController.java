@@ -1,7 +1,10 @@
-package com.example.payroll;
+package com.example.payroll.Controller;
 
 import java.util.List;
 
+import com.example.payroll.Repository.AddressRepository;
+import com.example.payroll.Service.AddressService;
+import com.example.payroll.Entity.Address;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class AddressController {
+public class AddressController {
     @Autowired
     private AddressRepository repository;
     private AddressService service;

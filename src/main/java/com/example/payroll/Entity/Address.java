@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.payroll.Entity;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-class Address {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ class Address {
 
     Address() {}
 
-    Address(String country, String city, String street, String zip) {
+    public Address(String country, String city, String street, String zip) {
         this.country = country;
         this.city = city;
         this.street = street;

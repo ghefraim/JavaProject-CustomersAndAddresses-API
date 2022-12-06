@@ -1,4 +1,4 @@
-package com.example.payroll;
+package com.example.payroll.Entity;
 
 public class CustomerWithAddress {
     private Long id;
