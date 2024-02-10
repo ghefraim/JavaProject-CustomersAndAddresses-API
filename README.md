@@ -1,4 +1,4 @@
-# Java Project
-Acest repository contine proiectul lui Ghiurau Efraim (TI) la laboratorul de Java.
-Cerinta: Sa se creeze o noua entitate care sa poata fi accesata prin comande CRUD.
-Eu am creat 2 entitati cu legatura intre ele (relatie one-to-one): Customer si Address (adresa de locuinta a unui Customer).
+# Java Lab Project: Customer and Address Entity Relationship
+This repository contains Efraim Ghiurau's (IT) project for the Java laboratory.
+Requirement: Create a new entity that can be accessed through CRUD commands.
+I have created 2 entities with a relationship between them (one-to-one relationship): Customer and Address (the residential address of a Customer).
